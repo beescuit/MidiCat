@@ -95,7 +95,7 @@ function changeHand(hand, status, key) {
   current[hand] = status
 }
 
-Soundfont.instrument(ac, 'https://raw.githubusercontent.com/gleitz/midi-js-soundfonts/gh-pages/FluidR3_GM/electric_piano_2-mp3.js').then((instrument) => {
+Soundfont.instrument(ac, 'https://raw.githubusercontent.com/gleitz/midi-js-soundfonts/gh-pages/FluidR3_GM/acoustic_grand_piano-mp3.js').then((instrument) => {
   console.log('ready')
   loadFile = function () {
     let file = document.querySelector('input[type=file]').files[0]
