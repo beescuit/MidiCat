@@ -5,6 +5,7 @@ var loadFile, loadDataUri, Player
 var AudioContext = window.AudioContext || window.webkitAudioContext || false 
 var ac = new AudioContext || new webkitAudioContext
 var eventsDiv = document.getElementById('events')
+var isPlaying = false
 
 var playingnotes = {}
 var rendered = {}
@@ -68,14 +69,17 @@ const colorMap = {
 
 var play = function () {
   Player.play()
+  isPlaying = true
 }
 
 var pause = function () {
   Player.pause()
+  isPlaying = false
 }
 
 var stop = function () {
   Player.stop()
+  isPlaying = false
 }
 
 function changeHand(hand, status, key) {
@@ -98,6 +102,9 @@ function changeHand(hand, status, key) {
 Soundfont.instrument(ac, 'https://raw.githubusercontent.com/gleitz/midi-js-soundfonts/gh-pages/FluidR3_GM/electric_piano_2-mp3.js').then((instrument) => {
   console.log('ready')
   loadFile = function () {
+    if(isPlaying) {
+      stop()
+    }
     let file = document.querySelector('input[type=file]').files[0]
     let reader = new FileReader()
     if (file) reader.readAsArrayBuffer(file)
