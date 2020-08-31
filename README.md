@@ -1,5 +1,5 @@
 # MidiCat
-Bongo cat but it's a midi parser written in javascript and html
+Bongo cat but it's a midi parser writtenaa in javascript and html
 
 Let's do a quick FAQ
 ### 1. What is Bongo Cat?
@@ -10,3 +10,4 @@ We still don't have a website in the cloud, and development is far away from a s
 # If you want to try it out...
 Just clone the repo and open index.html with your favourite browser!
 oi
+aaaaaa
