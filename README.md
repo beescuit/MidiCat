@@ -9,3 +9,4 @@ This is it, but with a KEYBOARD! And... It parses MIDI files.
 We still don't have a website in the cloud, and development is far away from a stable point to host it somewhere (But I'll upload it to github pages sometime soon)
 # If you want to try it out...
 Just clone the repo and open index.html with your favourite browser!
+oi
